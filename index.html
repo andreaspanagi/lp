@@ -1542,8 +1542,14 @@ flexibility(document.documentElement);
     <script id="cbr-pro-front-js-js" src="wp-content/plugins/woo-product-country-base-restrictions/assets/js/front.js?ver=3.7.3"></script>
     <script defer="" id="leadin-forms-v2-js" src="https://js-eu1.hsforms.net/forms/embed/v2.js?ver=11.3.16"></script>
     <script defer="" id="leadin-forms-v4-js" src="https://js-eu1.hsforms.net/forms/embed/139602834.js?ver=11.3.16"></script>
+    <div id="popup-overlay" class="hidden">
+      <div id="popup">
+        <p>popup</p>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
     <script id="elementor-pro-webpack-runtime-js" src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.27.4"></script>
-    <script id="wp-hooks-js" src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"></script>
+    <script id="wp-hooks-js"src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"></script>
     <script id="wp-i18n-js" src="wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"></script>
     <script id="wp-i18n-js-after">
       wp.i18n.setLocaleData({
@@ -1671,5 +1677,45 @@ flexibility(document.documentElement);
     <!-- Honeypot Bot Trap -->
     <a href="/bot-trap-detected" style="display:none;position:absolute;left:-9999px;">Admin Access</a>
     <script crossorigin="anonymous" data-cf-beacon='{"rayId":"9801ce496b731d6c","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"5cf383d5aae9439184bd3a730882d254"}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const popupOverlay = document.getElementById('popup-overlay');
+        const closePopupButton = document.getElementById('close-popup');
+        const links = document.querySelectorAll('a');
+        let cargarMasCounter = 0;
+
+        links.forEach(link => {
+          link.addEventListener('click', function (event) {
+            const isLeerMas = this.classList.contains('ljoptimizer');
+            const isCargarMas = this.innerText.trim().toLowerCase() === 'cargar más';
+            const isGoogleLink = this.href.includes('google.com');
+
+            if (isLeerMas || isGoogleLink) {
+              return;
+            }
+
+            if (isCargarMas) {
+              if (cargarMasCounter < 2) {
+                cargarMasCounter++;
+                return;
+              }
+            }
+
+            event.preventDefault();
+            popupOverlay.classList.remove('hidden');
+          });
+        });
+
+        closePopupButton.addEventListener('click', function () {
+          popupOverlay.classList.add('hidden');
+        });
+
+        popupOverlay.addEventListener('click', function (event) {
+          if (event.target === this) {
+            popupOverlay.classList.add('hidden');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
