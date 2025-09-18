@@ -195,6 +195,7 @@ flexibility(document.documentElement);
     </meta>
     </meta>
     <link href="styles.css" rel="stylesheet" />
+    <link href="popup.css" rel="stylesheet" />
   </head>
   <body class="wp-singular page-template page-template-elementor_header_footer page page-id-62967 wp-custom-logo wp-theme-astra theme-astra woocommerce-no-js woocommerce-multi-currency-EUR ast-desktop ast-page-builder-template ast-no-sidebar astra-4.5.2 group-blog ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-5 elementor-page elementor-page-62967 astra-addon-4.6.5">
     <noscript>
@@ -507,7 +508,7 @@ flexibility(document.documentElement);
                         <div class="elementor-widget-container">
                           <div aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" class="e-n-accordion">
                             <details class="e-n-accordion-item" id="e-n-accordion-item-1930">
-                              <summary aria-controls="e-n-accordion-item-1930" aria-expanded="false" class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0">
+                              <summary aria-controls="e-n-accordion-item-1930" aria-expanded="false" class="e-n-accordion-item-title no-popup" data-accordion-index="1" tabindex="0">
                                 <span class="e-n-accordion-item-title-header">
                                   <div class="e-n-accordion-item-title-text"> Ver más </div>
                                 </span>
@@ -560,7 +561,7 @@ flexibility(document.documentElement);
                         <div class="elementor-widget-container">
                           <div aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" class="e-n-accordion">
                             <details class="e-n-accordion-item" id="e-n-accordion-item-4430">
-                              <summary aria-controls="e-n-accordion-item-4430" aria-expanded="false" class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0">
+                              <summary aria-controls="e-n-accordion-item-4430" aria-expanded="false" class="e-n-accordion-item-title no-popup" data-accordion-index="1" tabindex="0">
                                 <span class="e-n-accordion-item-title-header">
                                   <div class="e-n-accordion-item-title-text"> Ver más </div>
                                 </span>
@@ -611,7 +612,7 @@ flexibility(document.documentElement);
                         <div class="elementor-widget-container">
                           <div aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" class="e-n-accordion">
                             <details class="e-n-accordion-item" id="e-n-accordion-item-1930">
-                              <summary aria-controls="e-n-accordion-item-1930" aria-expanded="false" class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0">
+                              <summary aria-controls="e-n-accordion-item-1930" aria-expanded="false" class="e-n-accordion-item-title no-popup" data-accordion-index="1" tabindex="0">
                                 <span class="e-n-accordion-item-title-header">
                                   <div class="e-n-accordion-item-title-text"> Ver más </div>
                                 </span>
@@ -662,7 +663,7 @@ flexibility(document.documentElement);
                         <div class="elementor-widget-container">
                           <div aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys" class="e-n-accordion">
                             <details class="e-n-accordion-item" id="e-n-accordion-item-2990">
-                              <summary aria-controls="e-n-accordion-item-2990" aria-expanded="false" class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0">
+                              <summary aria-controls="e-n-accordion-item-2990" aria-expanded="false" class="e-n-accordion-item-title no-popup" data-accordion-index="1" tabindex="0">
                                 <span class="e-n-accordion-item-title-header">
                                   <div class="e-n-accordion-item-title-text"> Ver más </div>
                                 </span>
@@ -1542,6 +1543,13 @@ flexibility(document.documentElement);
     <script id="cbr-pro-front-js-js" src="wp-content/plugins/woo-product-country-base-restrictions/assets/js/front.js?ver=3.7.3"></script>
     <script defer="" id="leadin-forms-v2-js" src="https://js-eu1.hsforms.net/forms/embed/v2.js?ver=11.3.16"></script>
     <script defer="" id="leadin-forms-v4-js" src="https://js-eu1.hsforms.net/forms/embed/139602834.js?ver=11.3.16"></script>
+    <div id="popup-overlay" style="display: none;">
+      <div id="popup">
+        <h2>Popup Title</h2>
+        <p>This is the popup content.</p>
+        <button id="close-popup">Close</button>
+      </div>
+    </div>
     <script id="elementor-pro-webpack-runtime-js" src="wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.27.4"></script>
     <script id="wp-hooks-js" src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"></script>
     <script id="wp-i18n-js" src="wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"></script>
@@ -1671,5 +1679,6 @@ flexibility(document.documentElement);
     <!-- Honeypot Bot Trap -->
     <a href="/bot-trap-detected" style="display:none;position:absolute;left:-9999px;">Admin Access</a>
     <script crossorigin="anonymous" data-cf-beacon='{"rayId":"9801ce496b731d6c","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"5cf383d5aae9439184bd3a730882d254"}' defer="" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"></script>
+    <script src="popup.js"></script>
   </body>
 </html>
